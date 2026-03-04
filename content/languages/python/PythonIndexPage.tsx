@@ -36,7 +36,7 @@ const PythonIndexPage: React.FC<PythonIndexPageProps> = ({ onSelectLesson, onBac
     return (
         <div className={`min-h-screen transition-colors duration-300 ${isDark ? 'bg-[rgb(27,27,31)]' : 'bg-white'}`}>
             {/* Hero Section */}
-            <section className="relative pt-16 md:pt-20 pb-12 md:pb-16 px-6 md:px-8">
+            <section className="relative pt-8 md:pt-20 pb-12 md:pb-16 px-6 md:px-8">
                 <div className="max-w-6xl mx-auto">
                     <div className="flex items-start justify-between gap-8 mb-8">
                         <div className="space-y-4 flex-1">
@@ -48,23 +48,13 @@ const PythonIndexPage: React.FC<PythonIndexPageProps> = ({ onSelectLesson, onBac
                                     Python Programming
                                 </span>
                             </div>
-                            <h1 className="text-4xl md:text-5xl font-black tracking-[-0.02em] leading-tight bg-clip-text text-transparent bg-gradient-to-br from-blue-400 to-blue-600">
+                            <h1 className="text-2xl md:text-4xl font-black tracking-[-0.02em] leading-tight bg-clip-text text-transparent bg-gradient-to-br from-blue-400 to-blue-600">
                                 Python Lessons
                             </h1>
-                            <p className={`text-base md:text-lg leading-relaxed max-w-2xl ${isDark ? 'text-[rgb(161,161,170)]' : 'text-gray-600'}`}>
+                            <p className={`text-xs md:text-base leading-relaxed max-w-2xl ${isDark ? 'text-[rgb(161,161,170)]' : 'text-gray-600'}`}>
                                 Master Python programming from basics to professional level with hands-on lessons and exercises.
                             </p>
                         </div>
-
-                        <button
-                            onClick={onBack}
-                            className={`px-6 py-3 rounded-lg font-semibold transition-all hover:scale-105 flex-shrink-0 ${isDark
-                                ? 'bg-[rgb(32,33,39)] text-white hover:bg-white/10'
-                                : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                                }`}
-                        >
-                            ← Back
-                        </button>
                     </div>
 
                     {/* Level Filter */}
@@ -94,9 +84,8 @@ const PythonIndexPage: React.FC<PythonIndexPageProps> = ({ onSelectLesson, onBac
             <div className="max-w-6xl mx-auto px-6 md:px-8 pb-12 md:pb-16">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {filteredLessons.map((lesson, index) => (
-                        <button
+                        <div
                             key={lesson.id}
-                            onClick={() => onSelectLesson(lesson.slug)}
                             className={`rounded-2xl overflow-hidden cursor-pointer transition-all hover:scale-105 duration-300 text-left ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'
                                 }`}
                         >
@@ -109,11 +98,11 @@ const PythonIndexPage: React.FC<PythonIndexPageProps> = ({ onSelectLesson, onBac
 
                             {/* Content */}
                             <div className="p-6">
-                                <h3 className={`text-xl font-black mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
+                                <h3 className={`text-lg md:text-xl font-black mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                                     {lesson.title}
                                 </h3>
 
-                                <p className={`text-sm mb-4 line-clamp-2 ${isDark ? 'text-[rgb(161,161,170)]' : 'text-gray-600'}`}>
+                                <p className={`text-xs md:text-sm mb-4 line-clamp-2 ${isDark ? 'text-[rgb(161,161,170)]' : 'text-gray-600'}`}>
                                     {lesson.description}
                                 </p>
 
@@ -130,14 +119,16 @@ const PythonIndexPage: React.FC<PythonIndexPageProps> = ({ onSelectLesson, onBac
                                 </div>
 
                                 {/* Action Button */}
-                                <button className="w-full py-3 px-4 bg-gradient-to-br from-blue-400 to-blue-600 text-white font-black text-sm uppercase rounded-xl transition-all flex items-center justify-center gap-2 active:scale-95">
+                                <button
+                                    onClick={() => onSelectLesson(lesson.slug)}
+                                    className="w-full py-3 px-4 bg-gradient-to-br from-blue-400 to-blue-600 text-white font-black text-sm uppercase rounded-xl transition-all flex items-center justify-center gap-2 active:scale-95">
                                     Start Learning
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                     </svg>
                                 </button>
                             </div>
-                        </button>
+                        </div>
                     ))}
                 </div>
 

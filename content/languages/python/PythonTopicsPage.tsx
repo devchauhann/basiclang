@@ -54,37 +54,36 @@ const PythonTopicsPage: React.FC<PythonTopicsPageProps> = ({ courseId, onSelectT
             <section className="relative pt-16 md:pt-20 pb-12 md:pb-16 px-6 md:px-8">
                 <div className="max-w-6xl mx-auto">
                     <div className="flex items-start justify-between gap-8 mb-8">
-                        <div className="space-y-4 flex-1">
-                            <div className="flex items-center gap-3">
-                                <div className="p-2 rounded-lg bg-gradient-to-br from-blue-400 to-blue-600">
-                                    <SiPython size={28} color="#ffffff" />
-                                </div>
-                                <span className={`text-sm font-black uppercase tracking-wider ${isDark ? 'text-[rgb(161,161,170)]' : 'text-gray-600'}`}>
-                                    Python Learning Path
-                                </span>
-                            </div>
-                            <h1 className={`text-4xl md:text-5xl font-black tracking-[-0.02em] leading-tight bg-clip-text text-transparent bg-gradient-to-br ${courseInfo.color}`}>
-                                {courseInfo.name}
-                            </h1>
-                            <p className={`text-base md:text-lg leading-relaxed max-w-2xl ${isDark ? 'text-[rgb(161,161,170)]' : 'text-gray-600'}`}>
-                                {courseInfo.description} • {filteredLessons.length} lessons to master
-                            </p>
-                        </div>
-
                         <button
                             onClick={onBack}
-                            className={`px-6 py-3 rounded-lg font-semibold transition-all hover:scale-105 flex-shrink-0 ${isDark
+                            className={`px-4 py-2 rounded-lg font-semibold transition-all hover:scale-105 flex-shrink-0 text-sm md:text-base ${isDark
                                 ? 'bg-[rgb(32,33,39)] text-white hover:bg-white/10'
                                 : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                                 }`}
                         >
                             ← Back
                         </button>
+                        <div className="space-y-4 flex-1">
+                            <div className="flex items-center gap-3">
+                                <div className="p-2 rounded-lg bg-gradient-to-br from-blue-400 to-blue-600">
+                                    <SiPython size={28} color="#ffffff" />
+                                </div>
+                                <span className={`text-xs md:text-sm font-black uppercase tracking-wider ${isDark ? 'text-[rgb(161,161,170)]' : 'text-gray-600'}`}>
+                                    Python Learning Path
+                                </span>
+                            </div>
+                            <h1 className={`text-2xl md:text-4xl font-black tracking-[-0.02em] leading-tight bg-clip-text text-transparent bg-gradient-to-br ${courseInfo.color}`}>
+                                {courseInfo.name}
+                            </h1>
+                            <p className={`text-xs md:text-base leading-relaxed max-w-2xl ${isDark ? 'text-[rgb(161,161,170)]' : 'text-gray-600'}`}>
+                                {courseInfo.description} • {filteredLessons.length} lessons to master
+                            </p>
+                        </div>
                     </div>
 
                     {/* Level Filter */}
                     <div className="flex gap-3 flex-wrap">
-                        <span className={`text-sm font-semibold self-center ${isDark ? 'text-[rgb(161,161,170)]' : 'text-gray-600'}`}>
+                        <span className={`text-xs md:text-sm font-semibold self-center ${isDark ? 'text-[rgb(161,161,170)]' : 'text-gray-600'}`}>
                             Filter by level:
                         </span>
                         {['beginner', 'intermediate', 'advanced', 'pro'].map((level) => {
@@ -114,9 +113,8 @@ const PythonTopicsPage: React.FC<PythonTopicsPageProps> = ({ courseId, onSelectT
             <div className="max-w-6xl mx-auto px-6 md:px-8 pb-12 md:pb-16">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {filteredLessons.map((lesson, index) => (
-                        <button
+                        <div
                             key={lesson.id}
-                            onClick={() => onSelectTopic(lesson.slug)}
                             className={`rounded-2xl overflow-hidden cursor-pointer transition-all hover:scale-105 duration-300 text-left group ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'
                                 }`}
                         >
@@ -129,11 +127,11 @@ const PythonTopicsPage: React.FC<PythonTopicsPageProps> = ({ courseId, onSelectT
 
                             {/* Content */}
                             <div className="p-6">
-                                <h3 className={`text-xl font-black mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
+                                <h3 className={`text-lg md:text-xl font-black mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                                     {lesson.title}
                                 </h3>
 
-                                <p className={`text-sm mb-4 line-clamp-2 ${isDark ? 'text-[rgb(161,161,170)]' : 'text-gray-600'}`}>
+                                <p className={`text-xs md:text-sm mb-4 line-clamp-2 ${isDark ? 'text-[rgb(161,161,170)]' : 'text-gray-600'}`}>
                                     {lesson.description}
                                 </p>
 
@@ -150,19 +148,21 @@ const PythonTopicsPage: React.FC<PythonTopicsPageProps> = ({ courseId, onSelectT
                                 </div>
 
                                 {/* Action Button */}
-                                <button className={`w-full py-3 px-4 bg-gradient-to-br from-blue-400 to-blue-600 text-white font-black text-sm uppercase rounded-xl transition-all flex items-center justify-center gap-2 group-hover:scale-105 active:scale-95`}>
+                                <button
+                                    onClick={() => onSelectTopic(lesson.slug)}
+                                    className={`w-full py-3 px-4 bg-gradient-to-br from-blue-400 to-blue-600 text-white font-black text-sm uppercase rounded-xl transition-all flex items-center justify-center gap-2 group-hover:scale-105 active:scale-95`}>
                                     Learn Topic
                                     <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                                 </button>
                             </div>
-                        </button>
+                        </div>
                     ))}
                 </div>
 
                 {filteredLessons.length === 0 && (
                     <div className="text-center py-16">
                         <BookOpen className={`w-16 h-16 mx-auto mb-4 opacity-50 ${isDark ? 'text-[rgb(161,161,170)]' : 'text-gray-400'}`} />
-                        <p className={`text-lg font-semibold ${isDark ? 'text-[rgb(161,161,170)]' : 'text-gray-600'}`}>
+                        <p className={`text-sm md:text-base font-semibold ${isDark ? 'text-[rgb(161,161,170)]' : 'text-gray-600'}`}>
                             No topics found for this level.
                         </p>
                     </div>

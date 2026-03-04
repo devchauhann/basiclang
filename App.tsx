@@ -146,6 +146,7 @@ const App: React.FC = () => {
             <PythonLessonPage
               slug={selectedLessonSlug}
               onBack={() => navigateTo('topics', selectedCourseId)}
+              onNavigateToLesson={(slug) => navigateTo('lesson', selectedCourseId, slug)}
             />
           )}
         </div>

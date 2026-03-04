@@ -8,6 +8,7 @@ import { SiPython } from 'react-icons/si';
 interface PythonLessonPageProps {
     slug: string;
     onBack: () => void;
+    onNavigateToLesson?: (slug: string) => void;
 }
 
 // Dynamically import topic components
@@ -31,7 +32,7 @@ const topicComponents: Record<string, React.LazyExoticComponent<React.FC<any>>> 
     'generators-and-iterators': Generators,
 };
 
-const PythonLessonPage: React.FC<PythonLessonPageProps> = ({ slug, onBack }) => {
+const PythonLessonPage: React.FC<PythonLessonPageProps> = ({ slug, onBack, onNavigateToLesson }) => {
     const { theme } = useTheme();
     const isDark = theme === Theme.DARK;
     const lesson = getPythonLesson(slug);
@@ -65,35 +66,26 @@ const PythonLessonPage: React.FC<PythonLessonPageProps> = ({ slug, onBack }) => 
     return (
         <div className={`min-h-screen transition-colors duration-300 ${isDark ? 'bg-[rgb(27,27,31)]' : 'bg-white'}`}>
             {/* Hero Section */}
-            <section className="relative pt-16 md:pt-20 pb-12 md:pb-16 px-6 md:px-8">
+            <section className="relative pt-8 md:pt-20 pb-12 md:pb-16 px-6 md:px-8">
                 <div className="max-w-4xl mx-auto">
-                    <div className="flex items-start justify-between gap-8 mb-8">
-                        <div className="space-y-4 flex-1">
-                            <div className="flex items-center gap-3">
-                                <div className="p-2 rounded-lg bg-gradient-to-br from-blue-400 to-blue-600">
-                                    <SiPython size={28} color="#ffffff" />
-                                </div>
-                                <span className={`text-sm font-black uppercase tracking-wider ${isDark ? 'text-[rgb(161,161,170)]' : 'text-gray-600'}`}>
-                                    Python Course
-                                </span>
-                            </div>
-                            <h1 className="text-4xl md:text-5xl font-black tracking-[-0.02em] leading-tight bg-clip-text text-transparent bg-gradient-to-br from-blue-400 to-blue-600">
-                                {lesson.title}
-                            </h1>
-                            <p className={`text-base ${isDark ? 'text-[rgb(161,161,170)]' : 'text-gray-600'}`}>
-                                Lesson {lessonIndex + 1} of {totalLessons} • {lesson.description}
-                            </p>
-                        </div>
 
-                        <button
-                            onClick={onBack}
-                            className={`px-6 py-3 rounded-lg font-semibold transition-all hover:scale-105 flex-shrink-0 ${isDark
-                                ? 'bg-[rgb(32,33,39)] text-white hover:bg-white/10'
-                                : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                                }`}
-                        >
-                            ← Back
-                        </button>
+
+                    {/* Content */}
+                    <div className="space-y-4">
+                        <div className="flex items-center gap-3">
+                            <div className="p-2 rounded-lg bg-gradient-to-br from-blue-400 to-blue-600">
+                                <SiPython size={24} color="#ffffff" />
+                            </div>
+                            <span className={`text-xs md:text-sm font-black uppercase tracking-wider ${isDark ? 'text-[rgb(161,161,170)]' : 'text-gray-600'}`}>
+                                Python Course
+                            </span>
+                        </div>
+                        <h1 className="text-2xl md:text-5xl font-black tracking-[-0.02em] leading-tight bg-clip-text text-transparent bg-gradient-to-br from-blue-400 to-blue-600">
+                            {lesson.title}
+                        </h1>
+                        <p className={`text-sm md:text-base ${isDark ? 'text-[rgb(161,161,170)]' : 'text-gray-600'}`}>
+                            Lesson {lessonIndex + 1} of {totalLessons} • {lesson.description}
+                        </p>
                     </div>
                 </div>
             </section>
@@ -120,7 +112,7 @@ const PythonLessonPage: React.FC<PythonLessonPageProps> = ({ slug, onBack }) => 
                 <div className="flex gap-4 mt-12">
                     {prevLesson ? (
                         <button
-                            onClick={onBack}
+                            onClick={() => onNavigateToLesson ? onNavigateToLesson(prevLesson.slug) : onBack()}
                             className={`flex-1 px-6 py-3 rounded-lg font-semibold transition-all flex items-center justify-center gap-2 ${isDark
                                 ? 'bg-[rgb(32,33,39)] text-white hover:bg-white/10'
                                 : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
@@ -133,7 +125,7 @@ const PythonLessonPage: React.FC<PythonLessonPageProps> = ({ slug, onBack }) => 
                     )}
                     {nextLesson ? (
                         <button
-                            onClick={onBack}
+                            onClick={() => onNavigateToLesson ? onNavigateToLesson(nextLesson.slug) : onBack()}
                             className="flex-1 px-6 py-3 rounded-lg font-semibold transition-all flex items-center justify-center gap-2 bg-gradient-to-r from-pink-500 to-violet-600 text-white hover:scale-105"
                         >
                             Next →

@@ -361,12 +361,12 @@ for i in range(5):
 
                             {showResults && selectedAnswers[question.id] !== undefined && (
                                 <div className={`rounded-lg p-3 ${selectedAnswers[question.id] === question.correctAnswer
-                                        ? 'bg-green-500/10 border-l-4 border-green-500'
-                                        : 'bg-red-500/10 border-l-4 border-red-500'
+                                    ? 'bg-green-500/10 border-l-4 border-green-500'
+                                    : 'bg-red-500/10 border-l-4 border-red-500'
                                     }`}>
                                     <p className={`text-sm font-bold ${selectedAnswers[question.id] === question.correctAnswer
-                                            ? isDark ? 'text-green-400' : 'text-green-600'
-                                            : isDark ? 'text-red-400' : 'text-red-600'
+                                        ? isDark ? 'text-green-400' : 'text-green-600'
+                                        : isDark ? 'text-red-400' : 'text-red-600'
                                         }`}>
                                         {selectedAnswers[question.id] === question.correctAnswer ? '✓ Correct!' : '✗ Incorrect'}
                                     </p>
@@ -411,3 +411,5 @@ for i in range(5):
         </div>
     );
 };
+
+export default ControlFlow;

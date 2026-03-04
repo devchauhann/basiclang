@@ -52,26 +52,15 @@ const CoursesPage: React.FC<CoursesPageProps> = ({ onSelectCourse }) => {
 
     const courses: Course[] = [
         {
-            id: 'python-basics',
-            name: 'Python Basics',
+            id: 'python',
+            name: 'Python',
             icon: SiPython,
-            description: 'Learn Python fundamentals including data types, loops, functions, and file handling.',
+            description: 'Learn Python from basics to advanced concepts including data types, loops, functions, OOP, decorators, generators, and more.',
             level: 'beginner',
-            lessons: 26,
-            duration: '7 weeks',
+            lessons: 58,
+            duration: '17 weeks',
             color: 'from-blue-400 to-blue-600',
-            contentFolder: '/content/languages/python/basics'
-        },
-        {
-            id: 'python-pro',
-            name: 'Python Professional',
-            icon: SiPython,
-            description: 'Explore decorators, generators, OOP, testing, and web frameworks.',
-            level: 'pro',
-            lessons: 32,
-            duration: '10 weeks',
-            color: 'from-blue-600 to-indigo-700',
-            contentFolder: '/content/languages/python/pro'
+            contentFolder: '/content/languages/python'
         }
     ];
 
