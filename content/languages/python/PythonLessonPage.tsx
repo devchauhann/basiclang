@@ -13,6 +13,12 @@ interface PythonLessonPageProps {
 }
 
 // Dynamically import topic components
+const WhatIsPython = lazy(() => import('./topics/WhatIsPython'));
+const GettingStarted = lazy(() => import('./topics/GettingStarted'));
+const PythonSyntax = lazy(() => import('./topics/PythonSyntax'));
+const PythonStatements = lazy(() => import('./topics/PythonStatements'));
+const PrintOutput = lazy(() => import('./topics/PrintOutput'));
+const OutputNumbers = lazy(() => import('./topics/OutputNumbers'));
 const VariablesAndDataTypes = lazy(() => import('./topics/VariablesAndDataTypes'));
 const Operators = lazy(() => import('./topics/Operators'));
 const ControlFlow = lazy(() => import('./topics/ControlFlow'));
@@ -23,6 +29,12 @@ const Decorators = lazy(() => import('./topics/Decorators'));
 const Generators = lazy(() => import('./topics/Generators'));
 
 const topicComponents: Record<string, React.LazyExoticComponent<React.FC<any>>> = {
+    'what-is-python': WhatIsPython,
+    'getting-started-with-python': GettingStarted,
+    'python-syntax': PythonSyntax,
+    'python-statements': PythonStatements,
+    'python-print-output': PrintOutput,
+    'python-output-numbers': OutputNumbers,
     'variables-and-data-types': VariablesAndDataTypes,
     'operators': Operators,
     'control-flow': ControlFlow,

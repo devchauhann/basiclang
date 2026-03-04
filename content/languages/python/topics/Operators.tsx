@@ -84,9 +84,9 @@ export const Operators: React.FC = () => {
     };
 
     return (
-        <div className={`min-h-screen ${isDark ? 'bg-[rgb(27,27,31)]' : 'bg-white'}`}>
+        <div className={`space-y-8 ${isDark ? 'text-[rgb(200,200,200)]' : 'text-gray-800'}`}>
             {/* Explanation Section */}
-            <div className={`rounded-2xl p-8 mb-8 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
+            <div className="space-y-4">
                 <h2 className={`text-3xl font-black mb-6 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                     What are Operators?
                 </h2>
@@ -97,7 +97,7 @@ export const Operators: React.FC = () => {
                         Python supports various types of operators including arithmetic, comparison, logical, and assignment operators.
                     </p>
 
-                    <div className={`rounded-lg p-4 ${isDark ? 'bg-[rgb(27,27,31)]' : 'bg-white'}`}>
+                    <div className={`rounded-2xl border-l-4 border-[#6771cd] p-4 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
                         <h3 className={`font-bold mb-3 ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
                             Types of Operators:
                         </h3>
@@ -124,7 +124,7 @@ export const Operators: React.FC = () => {
             </div>
 
             {/* Usage Examples Section */}
-            <div className={`rounded-2xl p-8 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
+            <div className="space-y-6">
                 <h2 className={`text-3xl font-black mb-6 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                     Usage Examples
                 </h2>
@@ -135,7 +135,7 @@ export const Operators: React.FC = () => {
                         <h3 className={`text-lg font-bold mb-3 ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
                             Example 1: Arithmetic Operators
                         </h3>
-                        <div className={`rounded-lg p-4 ${isDark ? 'bg-[rgb(27,27,31)]' : 'bg-white'}`}>
+                        <div className={`rounded-2xl border-l-4 border-[#6771cd] p-4 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
                             <pre className={`text-sm overflow-x-auto ${isDark ? 'text-[rgb(200,200,200)]' : 'text-gray-800'}`}>
                                 <code>{`# Arithmetic operators
 a = 10
@@ -173,7 +173,7 @@ print(f"Division: {division}")       # Output: Division: 3.333...`}</code>
                         <h3 className={`text-lg font-bold mb-3 ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
                             Example 2: Comparison Operators
                         </h3>
-                        <div className={`rounded-lg p-4 ${isDark ? 'bg-[rgb(27,27,31)]' : 'bg-white'}`}>
+                        <div className={`rounded-2xl border-l-4 border-[#6771cd] p-4 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
                             <pre className={`text-sm overflow-x-auto ${isDark ? 'text-[rgb(200,200,200)]' : 'text-gray-800'}`}>
                                 <code>{`# Comparison operators
 x = 5
@@ -210,7 +210,7 @@ print(f"x < y: {less_than}")     # Output: x < y: True`}</code>
                         <h3 className={`text-lg font-bold mb-3 ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
                             Example 3: Logical Operators
                         </h3>
-                        <div className={`rounded-lg p-4 ${isDark ? 'bg-[rgb(27,27,31)]' : 'bg-white'}`}>
+                        <div className={`rounded-2xl border-l-4 border-[#6771cd] p-4 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
                             <pre className={`text-sm overflow-x-auto ${isDark ? 'text-[rgb(200,200,200)]' : 'text-gray-800'}`}>
                                 <code>{`# Logical operators
 a = True
@@ -248,7 +248,7 @@ print(f"Can vote: {can_vote}")            # Output: Can vote: True`}</code>
                         <h3 className={`text-lg font-bold mb-3 ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
                             Example 4: Assignment Operators
                         </h3>
-                        <div className={`rounded-lg p-4 ${isDark ? 'bg-[rgb(27,27,31)]' : 'bg-white'}`}>
+                        <div className={`rounded-2xl border-l-4 border-[#6771cd] p-4 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
                             <pre className={`text-sm overflow-x-auto ${isDark ? 'text-[rgb(200,200,200)]' : 'text-gray-800'}`}>
                                 <code>{`# Assignment operators
 x = 10                # x = 10
@@ -278,7 +278,7 @@ print(f"Final value of x: {x}")  # Output: Final value of x: 6.0`}</code>
             </div>
 
             {/* MCQ Section */}
-            <div className={`rounded-2xl p-8 mt-8 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
+            <div className="space-y-6">
                 <h2 className={`text-3xl font-black mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                     Test Your Knowledge
                 </h2>

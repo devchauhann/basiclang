@@ -105,9 +105,9 @@ export const Generators: React.FC = () => {
     };
 
     return (
-        <div className={`min-h-screen ${isDark ? 'bg-[rgb(27,27,31)]' : 'bg-white'}`}>
+        <div className={`space-y-8 ${isDark ? 'text-[rgb(200,200,200)]' : 'text-gray-800'}`}>
             {/* Explanation Section */}
-            <div className={`rounded-2xl p-8 mb-8 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
+            <div className="space-y-4">
                 <h2 className={`text-3xl font-black mb-6 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                     Generators and Iterators
                 </h2>
@@ -119,7 +119,7 @@ export const Generators: React.FC = () => {
                         to pause execution and resume later, making them perfect for working with large datasets or infinite sequences.
                     </p>
 
-                    <div className={`rounded-lg p-4 ${isDark ? 'bg-[rgb(27,27,31)]' : 'bg-white'}`}>
+                    <div className={`rounded-2xl border-l-4 border-[#6771cd] p-4 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
                         <h3 className={`font-bold mb-3 ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
                             Key Concepts:
                         </h3>
@@ -150,7 +150,7 @@ export const Generators: React.FC = () => {
             </div>
 
             {/* Usage Examples Section */}
-            <div className={`rounded-2xl p-8 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
+            <div className="space-y-6">
                 <h2 className={`text-3xl font-black mb-6 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                     Usage Examples
                 </h2>
@@ -161,7 +161,7 @@ export const Generators: React.FC = () => {
                         <h3 className={`text-lg font-bold mb-3 ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
                             Example 1: Simple Generator
                         </h3>
-                        <div className={`rounded-lg p-4 ${isDark ? 'bg-[rgb(27,27,31)]' : 'bg-white'}`}>
+                        <div className={`rounded-2xl border-l-4 border-[#6771cd] p-4 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
                             <pre className={`text-sm overflow-x-auto ${isDark ? 'text-[rgb(200,200,200)]' : 'text-gray-800'}`}>
                                 <code>{`# Generator function
 def count_up_to(max):
@@ -205,7 +205,7 @@ for num in count_up_to(5):
                         <h3 className={`text-lg font-bold mb-3 ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
                             Example 2: Generator Expression
                         </h3>
-                        <div className={`rounded-lg p-4 ${isDark ? 'bg-[rgb(27,27,31)]' : 'bg-white'}`}>
+                        <div className={`rounded-2xl border-l-4 border-[#6771cd] p-4 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
                             <pre className={`text-sm overflow-x-auto ${isDark ? 'text-[rgb(200,200,200)]' : 'text-gray-800'}`}>
                                 <code>{`# Generator expression (like list comprehension but with parentheses)
 gen_squares = (x**2 for x in range(5))
@@ -250,7 +250,7 @@ print(f"Generator size: {sys.getsizeof(gen_squares)} bytes")
                         <h3 className={`text-lg font-bold mb-3 ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
                             Example 3: Fibonacci Generator
                         </h3>
-                        <div className={`rounded-lg p-4 ${isDark ? 'bg-[rgb(27,27,31)]' : 'bg-white'}`}>
+                        <div className={`rounded-2xl border-l-4 border-[#6771cd] p-4 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
                             <pre className={`text-sm overflow-x-auto ${isDark ? 'text-[rgb(200,200,200)]' : 'text-gray-800'}`}>
                                 <code>{`# Generator for Fibonacci sequence
 def fibonacci(limit):
@@ -291,7 +291,7 @@ print(f"\nFibonacci numbers up to 100: {fib_list}")`}</code>
                         <h3 className={`text-lg font-bold mb-3 ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
                             Example 4: Custom Iterator Class
                         </h3>
-                        <div className={`rounded-lg p-4 ${isDark ? 'bg-[rgb(27,27,31)]' : 'bg-white'}`}>
+                        <div className={`rounded-2xl border-l-4 border-[#6771cd] p-4 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
                             <pre className={`text-sm overflow-x-auto ${isDark ? 'text-[rgb(200,200,200)]' : 'text-gray-800'}`}>
                                 <code>{`# Custom iterator class
 class CountUp:
@@ -345,7 +345,7 @@ def count_up(max):
             </div>
 
             {/* MCQ Section */}
-            <div className={`rounded-2xl p-8 mt-8 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
+            <div className="space-y-6 mt-8">
                 <h2 className={`text-3xl font-black mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                     Test Your Knowledge
                 </h2>

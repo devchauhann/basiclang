@@ -89,9 +89,9 @@ export const Functions: React.FC = () => {
     };
 
     return (
-        <div className={`min-h-screen ${isDark ? 'bg-[rgb(27,27,31)]' : 'bg-white'}`}>
+        <div className={`space-y-8 ${isDark ? 'text-[rgb(200,200,200)]' : 'text-gray-800'}`}>
             {/* Explanation Section */}
-            <div className={`rounded-2xl p-8 mb-8 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
+            <div className="space-y-4">
                 <h2 className={`text-3xl font-black mb-6 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                     What are Functions?
                 </h2>
@@ -103,7 +103,7 @@ export const Functions: React.FC = () => {
                         (inputs), process them, and return results (outputs).
                     </p>
 
-                    <div className={`rounded-lg p-4 ${isDark ? 'bg-[rgb(27,27,31)]' : 'bg-white'}`}>
+                    <div className={`rounded-2xl border-l-4 border-[#6771cd] p-4 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
                         <h3 className={`font-bold mb-3 ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
                             Key Concepts:
                         </h3>
@@ -134,7 +134,7 @@ export const Functions: React.FC = () => {
             </div>
 
             {/* Usage Examples Section */}
-            <div className={`rounded-2xl p-8 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
+            <div className="space-y-6">
                 <h2 className={`text-3xl font-black mb-6 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                     Usage Examples
                 </h2>
@@ -145,7 +145,7 @@ export const Functions: React.FC = () => {
                         <h3 className={`text-lg font-bold mb-3 ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
                             Example 1: Basic Function Definition
                         </h3>
-                        <div className={`rounded-lg p-4 ${isDark ? 'bg-[rgb(27,27,31)]' : 'bg-white'}`}>
+                        <div className={`rounded-2xl border-l-4 border-[#6771cd] p-4 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
                             <pre className={`text-sm overflow-x-auto ${isDark ? 'text-[rgb(200,200,200)]' : 'text-gray-800'}`}>
                                 <code>{`# Simple function without parameters
 def greet():
@@ -187,7 +187,7 @@ print(result)              # Output: 8`}</code>
                         <h3 className={`text-lg font-bold mb-3 ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
                             Example 2: Default Parameters
                         </h3>
-                        <div className={`rounded-lg p-4 ${isDark ? 'bg-[rgb(27,27,31)]' : 'bg-white'}`}>
+                        <div className={`rounded-2xl border-l-4 border-[#6771cd] p-4 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
                             <pre className={`text-sm overflow-x-auto ${isDark ? 'text-[rgb(200,200,200)]' : 'text-gray-800'}`}>
                                 <code>{`# Function with default parameters
 def introduce(name, age=25, city="NYC"):
@@ -223,7 +223,7 @@ introduce("Charlie", 28, "Los Angeles")     # All values provided
                         <h3 className={`text-lg font-bold mb-3 ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
                             Example 3: Returning Multiple Values
                         </h3>
-                        <div className={`rounded-lg p-4 ${isDark ? 'bg-[rgb(27,27,31)]' : 'bg-white'}`}>
+                        <div className={`rounded-2xl border-l-4 border-[#6771cd] p-4 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
                             <pre className={`text-sm overflow-x-auto ${isDark ? 'text-[rgb(200,200,200)]' : 'text-gray-800'}`}>
                                 <code>{`# Function returning multiple values as tuple
 def divide_and_remainder(dividend, divisor):
@@ -263,7 +263,7 @@ print(user["age"])                       # Output: 25`}</code>
                         <h3 className={`text-lg font-bold mb-3 ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
                             Example 4: Variable Number of Arguments
                         </h3>
-                        <div className={`rounded-lg p-4 ${isDark ? 'bg-[rgb(27,27,31)]' : 'bg-white'}`}>
+                        <div className={`rounded-2xl border-l-4 border-[#6771cd] p-4 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
                             <pre className={`text-sm overflow-x-auto ${isDark ? 'text-[rgb(200,200,200)]' : 'text-gray-800'}`}>
                                 <code>{`# *args - variable number of positional arguments (tuple)
 def sum_all(*numbers):
@@ -305,7 +305,7 @@ print_info(name="Alice", age=25, city="NYC")
             </div>
 
             {/* MCQ Section */}
-            <div className={`rounded-2xl p-8 mt-8 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
+            <div className="space-y-6 mt-8">
                 <h2 className={`text-3xl font-black mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                     Test Your Knowledge
                 </h2>

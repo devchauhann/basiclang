@@ -99,9 +99,9 @@ export const Decorators: React.FC = () => {
     };
 
     return (
-        <div className={`min-h-screen ${isDark ? 'bg-[rgb(27,27,31)]' : 'bg-white'}`}>
+        <div className={`space-y-8 ${isDark ? 'text-[rgb(200,200,200)]' : 'text-gray-800'}`}>
             {/* Explanation Section */}
-            <div className={`rounded-2xl p-8 mb-8 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
+            <div className="space-y-4">
                 <h2 className={`text-3xl font-black mb-6 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                     What are Decorators?
                 </h2>
@@ -113,7 +113,7 @@ export const Decorators: React.FC = () => {
                         return a modified version. Decorators are commonly used for logging, timing, authentication, and validation.
                     </p>
 
-                    <div className={`rounded-lg p-4 ${isDark ? 'bg-[rgb(27,27,31)]' : 'bg-white'}`}>
+                    <div className={`rounded-2xl border-l-4 border-[#6771cd] p-4 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
                         <h3 className={`font-bold mb-3 ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
                             Key Concepts:
                         </h3>
@@ -144,7 +144,7 @@ export const Decorators: React.FC = () => {
             </div>
 
             {/* Usage Examples Section */}
-            <div className={`rounded-2xl p-8 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
+            <div className="space-y-6">
                 <h2 className={`text-3xl font-black mb-6 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                     Usage Examples
                 </h2>
@@ -155,7 +155,7 @@ export const Decorators: React.FC = () => {
                         <h3 className={`text-lg font-bold mb-3 ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
                             Example 1: Simple Decorator
                         </h3>
-                        <div className={`rounded-lg p-4 ${isDark ? 'bg-[rgb(27,27,31)]' : 'bg-white'}`}>
+                        <div className={`rounded-2xl border-l-4 border-[#6771cd] p-4 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
                             <pre className={`text-sm overflow-x-auto ${isDark ? 'text-[rgb(200,200,200)]' : 'text-gray-800'}`}>
                                 <code>{`# Define a decorator
 def my_decorator(func):
@@ -199,7 +199,7 @@ say_hello()
                         <h3 className={`text-lg font-bold mb-3 ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
                             Example 2: Decorator with *args and **kwargs
                         </h3>
-                        <div className={`rounded-lg p-4 ${isDark ? 'bg-[rgb(27,27,31)]' : 'bg-white'}`}>
+                        <div className={`rounded-2xl border-l-4 border-[#6771cd] p-4 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
                             <pre className={`text-sm overflow-x-auto ${isDark ? 'text-[rgb(200,200,200)]' : 'text-gray-800'}`}>
                                 <code>{`from functools import wraps
 
@@ -245,7 +245,7 @@ print(greet("Alice", greeting="Hi"))  # Output: Hi, Alice!`}</code>
                         <h3 className={`text-lg font-bold mb-3 ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
                             Example 3: Timing Decorator (Use Case)
                         </h3>
-                        <div className={`rounded-lg p-4 ${isDark ? 'bg-[rgb(27,27,31)]' : 'bg-white'}`}>
+                        <div className={`rounded-2xl border-l-4 border-[#6771cd] p-4 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
                             <pre className={`text-sm overflow-x-auto ${isDark ? 'text-[rgb(200,200,200)]' : 'text-gray-800'}`}>
                                 <code>{`import time
 from functools import wraps
@@ -294,7 +294,7 @@ print(fast_function())  # Shows execution time`}</code>
                         <h3 className={`text-lg font-bold mb-3 ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
                             Example 4: Stacking Multiple Decorators
                         </h3>
-                        <div className={`rounded-lg p-4 ${isDark ? 'bg-[rgb(27,27,31)]' : 'bg-white'}`}>
+                        <div className={`rounded-2xl border-l-4 border-[#6771cd] p-4 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
                             <pre className={`text-sm overflow-x-auto ${isDark ? 'text-[rgb(200,200,200)]' : 'text-gray-800'}`}>
                                 <code>{`def bold(func):
     def wrapper(*args, **kwargs):
@@ -343,7 +343,7 @@ print(greet())
             </div>
 
             {/* MCQ Section */}
-            <div className={`rounded-2xl p-8 mt-8 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
+            <div className="space-y-6 mt-8">
                 <h2 className={`text-3xl font-black mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                     Test Your Knowledge
                 </h2>

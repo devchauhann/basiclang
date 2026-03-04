@@ -27,6 +27,66 @@ export interface Exercise {
 
 export const pythonLessons: PythonLesson[] = [
     {
+        id: 'py-000',
+        slug: 'what-is-python',
+        title: 'What is Python?',
+        description: 'Introduction to Python - learn what Python is and why it\'s so popular.',
+        level: 'beginner',
+        content: 'Introduction to Python programming language.',
+        codeExamples: [],
+        exercises: []
+    },
+    {
+        id: 'py-000a',
+        slug: 'getting-started-with-python',
+        title: 'Getting Started with Python',
+        description: 'Set up Python environment and run your first program.',
+        level: 'beginner',
+        content: 'Get started with Python programming.',
+        codeExamples: [],
+        exercises: []
+    },
+    {
+        id: 'py-000b',
+        slug: 'python-syntax',
+        title: 'Python Syntax',
+        description: 'Learn the basic syntax rules and conventions in Python.',
+        level: 'beginner',
+        content: 'Python syntax and basic rules.',
+        codeExamples: [],
+        exercises: []
+    },
+    {
+        id: 'py-000c',
+        slug: 'python-statements',
+        title: 'Python Statements',
+        description: 'Understand different types of statements in Python.',
+        level: 'beginner',
+        content: 'Python statements explained.',
+        codeExamples: [],
+        exercises: []
+    },
+    {
+        id: 'py-000d',
+        slug: 'python-print-output',
+        title: 'Python Print and Output',
+        description: 'Learn how to print and display output in Python.',
+        level: 'beginner',
+        content: 'Print statements and output in Python.',
+        codeExamples: [],
+        exercises: []
+    },
+    {
+        id: 'py-000e',
+        slug: 'python-output-numbers',
+        title: 'Python Output Numbers',
+        description: 'Work with numbers and different number formats in output.',
+        level: 'beginner',
+        content: 'Output numbers in Python.',
+        codeExamples: [],
+        exercises: []
+    },
+    {
         id: 'py-001',
         slug: 'variables-and-data-types',
         title: 'Variables and Data Types',

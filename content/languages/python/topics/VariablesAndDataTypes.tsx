@@ -57,7 +57,7 @@ const VariablesAndDataTypes: React.FC<PythonTopicProps> = ({ isDark }) => {
     return (
         <div className={`space-y-8 ${isDark ? 'text-[rgb(200,200,200)]' : 'text-gray-800'}`}>
             {/* Explanation Section */}
-            <div className={`rounded-2xl p-8 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
+            <div className="space-y-6">
                 <h2 className={`text-3xl font-black mb-6 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                     Variables and Data Types
                 </h2>
@@ -110,7 +110,7 @@ const VariablesAndDataTypes: React.FC<PythonTopicProps> = ({ isDark }) => {
             </div>
 
             {/* Usage Examples Section */}
-            <div className={`rounded-2xl p-8 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
+            <div className="space-y-6">
                 <h2 className={`text-3xl font-black mb-6 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                     Usage Examples
                 </h2>
@@ -121,7 +121,7 @@ const VariablesAndDataTypes: React.FC<PythonTopicProps> = ({ isDark }) => {
                         <h3 className={`text-lg font-bold mb-3 ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
                             Example 1: Creating Variables
                         </h3>
-                        <div className={`rounded-lg p-4 ${isDark ? 'bg-[rgb(27,27,31)]' : 'bg-white'}`}>
+                        <div className={`rounded-2xl border-l-4 border-[#6771cd] p-4 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
                             <pre className={`text-sm overflow-x-auto ${isDark ? 'text-[rgb(200,200,200)]' : 'text-gray-800'}`}>
                                 <code>{`# Creating variables of different types
 name = "Alice"        # String variable
@@ -143,7 +143,7 @@ print(is_student)     # Output: True`}</code>
                         <h3 className={`text-lg font-bold mb-3 ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
                             Example 2: Checking Data Types
                         </h3>
-                        <div className={`rounded-lg p-4 ${isDark ? 'bg-[rgb(27,27,31)]' : 'bg-white'}`}>
+                        <div className={`rounded-2xl border-l-4 border-[#6771cd] p-4 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
                             <pre className={`text-sm overflow-x-auto ${isDark ? 'text-[rgb(200,200,200)]' : 'text-gray-800'}`}>
                                 <code>{`# Using type() function to check data types
 print(type(25))           # Output: <class 'int'>
@@ -160,7 +160,7 @@ print(type([1, 2, 3]))    # Output: <class 'list'>`}</code>
                         <h3 className={`text-lg font-bold mb-3 ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
                             Example 3: Type Conversion
                         </h3>
-                        <div className={`rounded-lg p-4 ${isDark ? 'bg-[rgb(27,27,31)]' : 'bg-white'}`}>
+                        <div className={`rounded-2xl border-l-4 border-[#6771cd] p-4 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
                             <pre className={`text-sm overflow-x-auto ${isDark ? 'text-[rgb(200,200,200)]' : 'text-gray-800'}`}>
                                 <code>{`# Converting between data types
 num_str = "42"
@@ -179,7 +179,7 @@ print(str_val)                # Output: "100"`}</code>
             </div>
 
             {/* MCQs Section */}
-            <div className={`rounded-2xl p-8 ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
+            <div className="space-y-8">
                 <h2 className={`text-3xl font-black mb-8 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                     Test Your Knowledge
                 </h2>

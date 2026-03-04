@@ -35,7 +35,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, title }) => {
                     {/* Left Section: Logo - Always visible */}
                     <div className="flex items-center gap-2">
                         {title ? (
-                            <h1 className={`text-[15px] font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-600`}>
+                            <h1 className={`text-[15px] font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-[#6771cd to-violet-600`}>
                                 {title}
                             </h1>
                         ) : (
@@ -69,21 +69,21 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, title }) => {
                         <div className="hidden md:flex items-center gap-4">
                             <button
                                 onClick={() => onNavigate?.('landing')}
-                                className={`text-[13px] font-semibold transition-all duration-500 ${isDark ? 'text-white/80 hover:text-pink-500' : 'text-gray-600 hover:text-black'}`}
+                                className={`text-[13px] font-semibold transition-all duration-500 ${isDark ? 'text-white/80 hover:text-[#6771cd' : 'text-gray-600 hover:text-black'}`}
                             >
                                 Home
                             </button>
                             <div className={`w-[1px] h-4 transition-all duration-500 ${isDark ? 'bg-white/10' : 'bg-black/10'}`} />
                             <button
                                 onClick={() => onNavigate?.('courses')}
-                                className={`${isDark ? 'text-white/70' : 'text-gray-500'} hover:text-pink-500 transition-all duration-500 flex items-center gap-1 text-[13px] font-semibold`}
+                                className={`${isDark ? 'text-white/70' : 'text-gray-500'} hover:text-[#6771cd transition-all duration-500 flex items-center gap-1 text-[13px] font-semibold`}
                             >
                                 Courses
                             </button>
                             <div className={`w-[1px] h-4 transition-all duration-500 ${isDark ? 'bg-white/10' : 'bg-black/10'}`} />
                             <button
                                 onClick={() => { }}
-                                className={`text-[13px] font-semibold transition-all duration-500 ${isDark ? 'text-white/80 hover:text-pink-500' : 'text-gray-600 hover:text-black'}`}
+                                className={`text-[13px] font-semibold transition-all duration-500 ${isDark ? 'text-white/80 hover:text-[#6771cd' : 'text-gray-600 hover:text-black'}`}
                             >
                                 Docs
                             </button>
