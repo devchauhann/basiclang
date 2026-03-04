@@ -4,6 +4,7 @@ import { Theme } from '../../../types';
 import { getPythonLesson, pythonLessons } from '../../../src/data/pythonLessons';
 import { ArrowLeft } from 'lucide-react';
 import { SiPython } from 'react-icons/si';
+import CustomLoader from '../../../src/components/CustomLoader';
 
 interface PythonLessonPageProps {
     slug: string;
@@ -94,11 +95,7 @@ const PythonLessonPage: React.FC<PythonLessonPageProps> = ({ slug, onBack, onNav
             <div className="max-w-4xl mx-auto px-6 md:px-8 pb-20">
                 {/* Load Topic Component */}
                 {TopicComponent ? (
-                    <Suspense fallback={
-                        <div className={`rounded-2xl p-8 text-center ${isDark ? 'bg-[rgb(32,33,39)]' : 'bg-gray-50'}`}>
-                            <p className={isDark ? 'text-white' : 'text-gray-900'}>Loading lesson content...</p>
-                        </div>
-                    }>
+                    <Suspense fallback={<CustomLoader isDark={isDark} />}>
                         <TopicComponent isDark={isDark} />
                     </Suspense>
                 ) : (
