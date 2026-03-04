@@ -47,7 +47,7 @@ const PythonLessonPage: React.FC<PythonLessonPageProps> = ({ slug, onBack, onNav
                     </p>
                     <button
                         onClick={onBack}
-                        className="mt-4 px-6 py-2 bg-gradient-to-r from-pink-500 to-violet-600 text-white rounded-lg"
+                        className="mt-4 px-6 py-2 bg-gradient-to-r from-[#6771cd] to-violet-600 text-white rounded-lg"
                     >
                         Go Back
                     </button>
@@ -123,7 +123,7 @@ const PythonLessonPage: React.FC<PythonLessonPageProps> = ({ slug, onBack, onNav
                     {nextLesson ? (
                         <button
                             onClick={() => onNavigateToLesson ? onNavigateToLesson(nextLesson.slug) : onBack()}
-                            className="flex-1 px-6 py-3 rounded-lg font-semibold transition-all flex items-center justify-center gap-2 bg-gradient-to-r from-pink-500 to-violet-600 text-white hover:scale-105"
+                            className="flex-1 px-6 py-3 rounded-lg font-semibold transition-all flex items-center justify-center gap-2 bg-gradient-to-r from-[#6771cd] to-violet-600 text-white hover:scale-105"
                         >
                             Next →
                         </button>

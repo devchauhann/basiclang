@@ -56,9 +56,9 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                     <div>
                         <div className="flex items-center gap-1.5 mb-4">
                             <img
-                                src="/logo.png"
+                                src="/icon.webp"
                                 alt="BasicLang Logo"
-                                className="w-8 h-8 object-contain"
+                                className="w-5 h-5 object-contain"
                             />
                             <h3 className={`text-lg font-bold ${isDark ? 'text-white' : 'text-black'}`}>
                                 BasicLang
@@ -79,7 +79,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                                 <li key={link.name}>
                                     <button
                                         onClick={() => handleNavigation(link.view, link.name)}
-                                        className={`text-sm font-medium transition-all duration-300 hover:text-pink-500 cursor-pointer ${clickedLink === link.name ? 'opacity-50 scale-95' : 'opacity-100 scale-100'
+                                        className={`text-sm font-medium transition-all duration-300 hover:text-[#6771cd] cursor-pointer ${clickedLink === link.name ? 'opacity-50 scale-95' : 'opacity-100 scale-100'
                                             } ${isDark ? 'text-gray-400 hover:text-pink-400' : 'text-gray-700 hover:text-pink-600'
                                             }`}
                                     >
@@ -99,7 +99,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                             {featuresLinks.map(link => (
                                 <li key={link.name}>
                                     <span className={`text-sm font-medium flex items-center gap-2 ${isDark ? 'text-gray-400' : 'text-gray-700'}`}>
-                                        <span className="w-1.5 h-1.5 rounded-full bg-pink-500"></span>
+                                        <span className="w-1.5 h-1.5 rounded-full bg-[#6771cd]"></span>
                                         {link.name}
                                     </span>
                                 </li>
@@ -124,7 +124,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                                             handleNavigation(link.view, link.name);
                                         }
                                     }}
-                                    className={`text-xs font-medium transition-all duration-300 hover:text-pink-500 cursor-pointer ${clickedLink === link.name ? 'opacity-50 scale-95' : 'opacity-100 scale-100'
+                                    className={`text-xs font-medium transition-all duration-300 hover:text-[#6771cd] cursor-pointer ${clickedLink === link.name ? 'opacity-50 scale-95' : 'opacity-100 scale-100'
                                         } ${isDark ? 'text-gray-500 hover:text-pink-400' : 'text-gray-600 hover:text-pink-600'
                                         }`}
                                 >

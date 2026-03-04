@@ -45,9 +45,9 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, title }) => {
                                     className="cursor-pointer hover:opacity-80 transition-opacity duration-300"
                                 >
                                     <img
-                                        src="/logo.png"
+                                        src="/icon.webp"
                                         alt="BasicLang Logo"
-                                        className="w-8 h-8 object-contain"
+                                        className="w-5 h-5 object-contain"
                                     />
                                 </button>
                                 <button

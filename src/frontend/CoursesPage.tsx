@@ -86,7 +86,7 @@ const CoursesPage: React.FC<CoursesPageProps> = ({ onSelectCourse }) => {
                     <div className="space-y-8">
                         {/* Hero Title */}
                         <div className="space-y-3">
-                            <h1 className="text-4xl md:text-5xl font-black tracking-[-0.02em] leading-tight bg-clip-text text-transparent bg-gradient-to-br from-pink-500 via-pink-400 to-violet-600">
+                            <h1 className="text-4xl md:text-5xl font-black tracking-[-0.02em] leading-tight bg-clip-text text-transparent bg-gradient-to-br from-[#6771cd] via-[#5a63c0] to-[#6771cd]">
                                 Explore Courses
                             </h1>
                             <p className={`text-base md:text-lg leading-relaxed max-w-2xl ${isDark ? 'text-[rgb(161,161,170)]' : 'text-gray-600'}`}>
@@ -105,8 +105,8 @@ const CoursesPage: React.FC<CoursesPageProps> = ({ onSelectCourse }) => {
                                     value={searchQuery}
                                     onChange={(e) => setSearchQuery(e.target.value)}
                                     className={`w-full pl-10 pr-4 py-2.5 rounded-lg transition-all text-sm ${isDark
-                                        ? 'bg-[rgb(32,33,39)] text-white placeholder-[rgb(161,161,170)]  focus:border-pink-500'
-                                        : 'bg-gray-100 text-gray-900 placeholder-gray-400 focus:border-pink-500'
+                                        ? 'bg-[rgb(32,33,39)] text-white placeholder-[rgb(161,161,170)]  focus:border-[#6771cd]'
+                                        : 'bg-gray-100 text-gray-900 placeholder-gray-400 focus:border-[#6771cd]'
                                         } focus:outline-none`}
                                 />
                             </div>
@@ -116,7 +116,7 @@ const CoursesPage: React.FC<CoursesPageProps> = ({ onSelectCourse }) => {
                                 <button
                                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                                     className={`px-4 py-2.5 rounded-lg font-semibold text-sm capitalize transition-all duration-300 flex items-center gap-2 whitespace-nowrap ${selectedLevel
-                                        ? 'bg-gradient-to-r from-pink-500 to-violet-600 text-white shadow-lg'
+                                        ? 'bg-gradient-to-r from-[#6771cd] to-[#5a63c0] text-white shadow-lg'
                                         : isDark
                                             ? 'bg-[rgb(32,33,39)] text-[rgb(161,161,170)] hover:text-white hover:bg-white/10'
                                             : 'bg-gray-100 text-gray-600 hover:text-gray-900 hover:bg-gray-200'
@@ -133,7 +133,7 @@ const CoursesPage: React.FC<CoursesPageProps> = ({ onSelectCourse }) => {
                                                 setSelectedLevel(null);
                                                 setIsDropdownOpen(false);
                                             }}
-                                            className={`w-full px-4 py-2.5 text-left text-sm font-semibold capitalize transition-all hover:bg-pink-500/20 ${!selectedLevel ? 'text-pink-500' : isDark ? 'text-[rgb(161,161,170)]' : 'text-gray-600'}`}
+                                            className={`w-full px-4 py-2.5 text-left text-sm font-semibold capitalize transition-all hover:bg-[#6771cd]/20 ${!selectedLevel ? 'text-[#6771cd]' : isDark ? 'text-[rgb(161,161,170)]' : 'text-gray-600'}`}
                                         >
                                             All Levels
                                         </button>
@@ -144,7 +144,7 @@ const CoursesPage: React.FC<CoursesPageProps> = ({ onSelectCourse }) => {
                                                     setSelectedLevel(level);
                                                     setIsDropdownOpen(false);
                                                 }}
-                                                className={`w-full px-4 py-2.5 text-left text-sm font-semibold capitalize transition-all hover:bg-pink-500/20 ${selectedLevel === level ? 'text-pink-500' : isDark ? 'text-[rgb(161,161,170)]' : 'text-gray-600'}`}
+                                                className={`w-full px-4 py-2.5 text-left text-sm font-semibold capitalize transition-all hover:bg-[#6771cd]/20 ${selectedLevel === level ? 'text-[#6771cd]' : isDark ? 'text-[rgb(161,161,170)]' : 'text-gray-600'}`}
                                             >
                                                 {level}
                                             </button>
@@ -199,7 +199,7 @@ const CoursesPage: React.FC<CoursesPageProps> = ({ onSelectCourse }) => {
                                 </div>
 
                                 {/* Action Button */}
-                                <button className="w-full py-3 px-4 bg-gradient-to-br from-pink-500 via-pink-500 to-violet-600 text-white font-black text-sm uppercase rounded-xl transition-all flex items-center justify-center gap-2 group active:scale-95">
+                                <button className="w-full py-3 px-4 bg-gradient-to-br from-[#6771cd] via-[#6771cd] to-[#5a63c0] text-white font-black text-sm uppercase rounded-xl transition-all flex items-center justify-center gap-2 group active:scale-95">
                                     Start Learning
                                     <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
                                 </button>

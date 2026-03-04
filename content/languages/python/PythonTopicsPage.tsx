@@ -65,14 +65,14 @@ const PythonTopicsPage: React.FC<PythonTopicsPageProps> = ({ courseId, onSelectT
                         </button>
                         <div className="space-y-4 flex-1">
                             <div className="flex items-center gap-3">
-                                <div className="p-2 rounded-lg bg-gradient-to-br from-blue-400 to-blue-600">
+                                <div className="p-2 rounded-lg bg-gradient-to-br from-[#6771cd] to-[#5a63c0]">
                                     <SiPython size={28} color="#ffffff" />
                                 </div>
                                 <span className={`text-xs md:text-sm font-black uppercase tracking-wider ${isDark ? 'text-[rgb(161,161,170)]' : 'text-gray-600'}`}>
                                     Python Learning Path
                                 </span>
                             </div>
-                            <h1 className={`text-2xl md:text-4xl font-black tracking-[-0.02em] leading-tight bg-clip-text text-transparent bg-gradient-to-br ${courseInfo.color}`}>
+                            <h1 className={`text-2xl md:text-4xl font-black tracking-[-0.02em] leading-tight bg-clip-text text-transparent bg-gradient-to-br from-[#6771cd] to-[#5a63c0]`}>
                                 {courseInfo.name}
                             </h1>
                             <p className={`text-xs md:text-base leading-relaxed max-w-2xl ${isDark ? 'text-[rgb(161,161,170)]' : 'text-gray-600'}`}>
@@ -95,7 +95,7 @@ const PythonTopicsPage: React.FC<PythonTopicsPageProps> = ({ courseId, onSelectT
                                     key={level}
                                     onClick={() => setSelectedLevel(selectedLevel === level ? null : level)}
                                     className={`px-4 py-2 rounded-lg font-semibold text-sm capitalize transition-all duration-300 ${selectedLevel === level
-                                        ? 'bg-gradient-to-r from-blue-400 to-blue-600 text-white shadow-lg'
+                                        ? 'bg-gradient-to-r from-[#6771cd] to-[#5a63c0] text-white shadow-lg'
                                         : isDark
                                             ? 'bg-[rgb(32,33,39)] text-[rgb(161,161,170)] hover:text-white hover:bg-white/10'
                                             : 'bg-gray-100 text-gray-600 hover:text-gray-900 hover:bg-gray-200'
@@ -150,7 +150,7 @@ const PythonTopicsPage: React.FC<PythonTopicsPageProps> = ({ courseId, onSelectT
                                 {/* Action Button */}
                                 <button
                                     onClick={() => onSelectTopic(lesson.slug)}
-                                    className={`w-full py-3 px-4 bg-gradient-to-br from-blue-400 to-blue-600 text-white font-black text-sm uppercase rounded-xl transition-all flex items-center justify-center gap-2 group-hover:scale-105 active:scale-95`}>
+                                    className={`w-full py-3 px-4 bg-gradient-to-br from-[#6771cd] to-[#5a63c0] text-white font-black text-sm uppercase rounded-xl transition-all flex items-center justify-center gap-2 group-hover:scale-105 active:scale-95`}>
                                     Learn Topic
                                     <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                                 </button>
